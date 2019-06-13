@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="414.0" prefWidth="635.000022070315" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="VentasFXDS3.EmployeesController">
+  <children>
+    <TitledPane animated="false" collapsible="false" layoutX="0.0" layoutY="0.0" prefHeight="207.0" prefWidth="635.0" text="Empleados">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <GridPane id="" fx:id="gridPane" hgap="10.0" layoutX="4.0" layoutY="0.0" prefHeight="181.0" prefWidth="620.0" vgap="10.0">
+              <children>
+                <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label text="Fecha de nacimiento:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label text="Ciudad:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Label text="Calle:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Label text="Sucursal:" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <Label text="Puesto:" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                <Label text="Teléfono:" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                <TextField fx:id="nameTextField" prefWidth="200.0" promptText="Nombre" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <ComboBox fx:id="cityComboBox" prefHeight="21.0" prefWidth="142.0" promptText="Ciudad" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList" />
+                  </items>
+                </ComboBox>
+                <TextField fx:id="streetTextField" prefWidth="83.0" promptText="Calle" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <TextField fx:id="homeTextField" prefWidth="200.0" promptText="#" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <Label text="C.P.:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <TextField fx:id="postalTextField" prefWidth="200.0" promptText="Código postal" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Label text="NSS:" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                <TextField fx:id="ssnTextField" prefWidth="200.0" promptText="NSS" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+                <ComboBox fx:id="branchComboBox" prefHeight="21.0" prefWidth="134.0" promptText="Sucursal" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList" />
+                  </items>
+                </ComboBox>
+                <ComboBox fx:id="positionComboBox" prefHeight="21.0" prefWidth="134.0" promptText="Puesto" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <TextField fx:id="phoneTextField" prefWidth="200.0" promptText="Teléfono" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                <Button fx:id="registerButton" mnemonicParsing="false" onAction="#registerButtonPressed" prefWidth="71.0" text="Registrar" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+                <Button fx:id="modButton" disable="true" mnemonicParsing="false" onAction="#modButtonPressed" prefWidth="71.0" text="Modificar" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                <Button fx:id="delButton" disable="true" mnemonicParsing="false" onAction="#delButtonPressed" prefWidth="71.0" text="Eliminar" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearButtonPressed" prefWidth="71.0" text="Limpiar" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.0" minWidth="10.0" prefWidth="116.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.0" minWidth="10.0" prefWidth="142.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="104.0" minWidth="10.0" prefWidth="47.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="104.0" minWidth="10.0" prefWidth="50.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="134.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="104.0" minWidth="10.0" prefWidth="69.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+    <TableView fx:id="tableView" layoutX="0.0" layoutY="207.0" prefHeight="207.0" prefWidth="635.0" />
+  </children>
+</AnchorPane>

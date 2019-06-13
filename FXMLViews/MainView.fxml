@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="472.0" prefWidth="680.0" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/2.2" fx:controller="VentasFXDS3.MainViewController">
+    <children>
+        <MenuBar fx:id="menuBar" layoutX="0.0" layoutY="0.0" useSystemMenuBar="false">
+            <menus>
+                <Menu mnemonicParsing="true" text="Ca_tálogos">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuItemsPressed" text="Artículos"
+                                  fx:id="menuItems">
+                            <accelerator>
+                                <KeyCodeCombination alt="DOWN" code="A" control="UP" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#menuClientsPressed" text="Clientes"
+                                  fx:id="menuClients">
+                            <accelerator>
+                                <KeyCodeCombination alt="DOWN" code="C" control="UP" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#menuEmpPressed" text="Empleados"
+                                  fx:id="menuEmployees">
+                            <accelerator>
+                                <KeyCodeCombination alt="DOWN" code="E" control="UP" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#menuBranchesPressed" text="Sucursales"
+                                  fx:id="menuBranches">
+                            <accelerator>
+                                <KeyCodeCombination alt="DOWN" code="S" control="UP" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#menuLocationPressed" text="Entidad geográfica"
+                                  fx:id="menuLocation">
+                            <accelerator>
+                                <KeyCodeCombination alt="DOWN" code="G" control="UP" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                        <MenuItem mnemonicParsing="false" onAction="#menuExitPressed" text="Salir" fx:id="menuExit">
+                            <accelerator>
+                                <KeyCodeCombination alt="DOWN" code="Q" control="UP" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="true" text="_Pedidos">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuOrdersPressed" fx:id="menuOrders" text="Ventas">
+                            <accelerator>
+                                <KeyCodeCombination alt="DOWN" code="I" control="UP" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="true" text="A_yuda">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </children>
+</AnchorPane>

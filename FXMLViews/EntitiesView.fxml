@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="386.0" prefWidth="586.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="VentasFXDS3.EntitiesController">
+  <children>
+    <TitledPane animated="false" collapsible="false" layoutX="0.0" layoutY="0.0" prefHeight="152.0" prefWidth="586.0" text="Entidades">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <Label layoutX="11.0" layoutY="8.0" text="Clave:" />
+            <TextField id="countryKeyTextField" fx:id="keyTextField" layoutX="53.0" layoutY="5.0" prefWidth="75.0" promptText="Clave" />
+            <TextField id="countryTextField" fx:id="nameTextField" layoutX="278.0" layoutY="5.0" prefWidth="200.0" promptText="Nombre" />
+            <Button fx:id="registerButton" disable="true" layoutX="489.0" layoutY="6.0" mnemonicParsing="false" onAction="#registerButtonPressed" prefWidth="71.0" text="Registrar" />
+            <Button fx:id="modButton" disable="true" layoutX="489.0" layoutY="38.0" mnemonicParsing="false" onAction="#modButtonPressed" prefWidth="71.0" text="Modificar" wrapText="false" />
+            <Button fx:id="delButton" disable="true" layoutX="489.0" layoutY="69.0" mnemonicParsing="false" onAction="#delButtonPressed" prefWidth="71.0" text="Eliminar" wrapText="false" />
+            <Button fx:id="clearButton" layoutX="489.0" layoutY="100.0" mnemonicParsing="false" onAction="#clearButtonPressed" prefWidth="71.0" text="Limpiar" />
+            <Label layoutX="209.0" layoutY="8.0" text="Nombre:" />
+            <ComboBox fx:id="countryComboBox" layoutX="53.0" layoutY="88.0" prefHeight="21.0" prefWidth="133.0" promptText="País">
+              <items>
+                <FXCollections fx:factory="observableArrayList" />
+              </items>
+            </ComboBox>
+            <Label layoutX="15.0" layoutY="91.0" text="País:" />
+            <Separator layoutX="0.0" layoutY="77.0" prefWidth="466.0" />
+            <Separator layoutX="463.0" layoutY="77.0" orientation="VERTICAL" prefHeight="51.0" />
+            <RadioButton fx:id="countryRadio" layoutX="27.0" layoutY="41.0" mnemonicParsing="false" selected="false" text="País">
+              <toggleGroup>
+                <ToggleGroup fx:id="toggleGroup" />
+              </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="stateRadio" layoutX="86.0" layoutY="41.0" mnemonicParsing="false" text="Estado" toggleGroup="$toggleGroup" />
+            <RadioButton fx:id="cityRadio" layoutX="157.0" layoutY="41.0" mnemonicParsing="false" text="Ciudad" toggleGroup="$toggleGroup" />
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+    <TableView fx:id="stateTable" layoutX="0.0" layoutY="152.0" prefHeight="234.0" prefWidth="293.0" />
+    <TableView fx:id="cityTable" layoutX="293.0" layoutY="152.0" prefHeight="234.0" prefWidth="293.0" />
+  </children>
+</AnchorPane>

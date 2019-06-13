@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="376.0" prefWidth="578.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="VentasFXDS3.SalesV1Controller">
+  <children>
+    <TitledPane animated="false" collapsible="false" layoutX="0.0" layoutY="0.0" prefHeight="188.0" prefWidth="578.0" text="Control de ventas">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <GridPane fx:id="gridPane" hgap="10.0" layoutX="0.0" layoutY="0.0" prefHeight="162.0" prefWidth="574.0" vgap="10.0">
+              <children>
+                <Label text="Número de empleado:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <ComboBox fx:id="empNoCombo" prefHeight="21.0" prefWidth="181.0" promptText="Empleado" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Label text="Número de sucursal:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <ComboBox fx:id="branchNoCombo" prefHeight="21.0" prefWidth="181.0" promptText="Sucursal" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Label text="Importe:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Label text="Fecha:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <TextField fx:id="amountTextField" prefWidth="200.0" promptText="Importe" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Button fx:id="registerButton" mnemonicParsing="false" onAction="#registerButtonPressed" prefWidth="71.0" text="Registrar" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                <Button fx:id="modButton" mnemonicParsing="false" onAction="#modButtonPressed" prefWidth="71.0" text="Modificar" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <Button fx:id="delButton" mnemonicParsing="false" onAction="#delButtonPressed" prefWidth="71.0" text="Eliminar" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearButtonPressed" prefWidth="71.0" text="Limpiar" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="181.0" minWidth="10.0" prefWidth="124.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="246.0" minWidth="10.0" prefWidth="169.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="181.0" minWidth="10.0" prefWidth="170.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="181.0" minWidth="10.0" prefWidth="71.0" />
+              </columnConstraints>
+              <padding>
+                <Insets left="5.0" right="5.0" />
+              </padding>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+    <TableView fx:id="tableView" layoutX="0.0" layoutY="188.0" prefHeight="188.0" prefWidth="578.0" />
+  </children>
+</AnchorPane>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="331.0" prefWidth="620.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="VentasFXDS3.ClientsController">
+  <children>
+    <TitledPane animated="false" collapsible="false" layoutX="0.0" layoutY="0.0" prefHeight="166.0" prefWidth="620.0" text="Registro">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="133.0" prefWidth="616.0">
+          <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Nombre:" />
+            <TextField fx:id="nameTextField" layoutX="73.0" layoutY="11.0" prefWidth="227.0" promptText="Nombre" />
+            <Label layoutX="14.0" layoutY="44.0" text="Ciudad:" />
+            <Label layoutX="14.0" layoutY="74.0" text="Calle:" />
+            <ComboBox fx:id="cityComboBox" layoutX="73.0" layoutY="42.0" prefHeight="21.0" prefWidth="227.0" promptText="Ciudad">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+            <TextField fx:id="streetTextField" layoutX="73.0" layoutY="71.0" prefWidth="154.0" promptText="Calle" />
+            <Label layoutX="235.0" layoutY="74.0" text="#" />
+            <TextField fx:id="homeTextField" layoutX="253.0" layoutY="71.0" prefWidth="47.0" promptText="#" />
+            <Label layoutX="310.0" layoutY="44.0" text="Teléfono:" />
+            <TextField fx:id="phoneTextField" layoutX="369.0" layoutY="41.0" prefWidth="114.0" promptText="Teléfono" />
+            <Label layoutX="310.0" layoutY="74.0" text="C.P.:" />
+            <TextField fx:id="postalTextField" layoutX="369.0" layoutY="71.0" prefWidth="114.0" promptText="Código postal" />
+            <Button fx:id="registerButton" layoutX="531.0" layoutY="11.0" mnemonicParsing="false" onAction="#registerButtonPressed" prefWidth="71.0" text="Registrar" />
+            <Button fx:id="modifyButton" layoutX="531.0" layoutY="41.0" mnemonicParsing="false" onAction="#modifyButtonPressed" prefWidth="71.0" text="Modificar" />
+            <Button id="Eliminar" fx:id="deleteButton" layoutX="531.0" layoutY="71.0" mnemonicParsing="false" onAction="#deleteButtonPressed" prefWidth="71.0" text="Eliminar" />
+            <Button fx:id="clearButton" layoutX="531.0" layoutY="101.0" mnemonicParsing="false" onAction="#clearButtonPressed" prefWidth="71.0" text="Limpiar" />
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+    <TableView fx:id="tableView" layoutX="0.0" layoutY="166.0" prefHeight="165.5" prefWidth="620.0" />
+  </children>
+</AnchorPane>

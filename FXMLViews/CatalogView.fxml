@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="336.0" prefWidth="538.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="VentasFXDS3.CatalogController">
+  <children>
+    <TableView fx:id="tableView" layoutX="0.0" layoutY="136.0" prefHeight="200.0" prefWidth="538.0" />
+    <TitledPane animated="false" collapsible="false" layoutX="0.0" layoutY="0.0" prefHeight="136.0" prefWidth="538.0" text="Control">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <Button fx:id="newItemButton" layoutX="14.0" layoutY="5.0" mnemonicParsing="false" onAction="#newItemButtonPressed" prefWidth="66.0" text="Nuevo" />
+            <Button fx:id="editButton" disable="true" layoutX="92.0" layoutY="5.0" mnemonicParsing="false" onAction="#editButtonPressed" prefWidth="66.0" text="Editar" />
+            <Button fx:id="saveButton" disable="true" layoutX="170.0" layoutY="5.0" mnemonicParsing="false" onAction="#saveButtonPressed" prefWidth="66.0" text="Guardar" />
+            <Button fx:id="cancelButton" disable="true" layoutX="248.0" layoutY="5.0" mnemonicParsing="false" onAction="#cancelButtonPressed" prefWidth="66.0" text="Cancelar" />
+            <Button fx:id="deleteButton" disable="true" layoutX="326.0" layoutY="5.0" mnemonicParsing="false" onAction="#deleteButtonPressed" prefWidth="66.0" text="Eliminar" />
+            <Button fx:id="exitButton" layoutX="458.0" layoutY="5.0" mnemonicParsing="false" onAction="#exitButtonPressed" prefWidth="66.0" text="Salir" />
+            <Label layoutX="14.0" layoutY="42.0" text="Nombre:" />
+            <Label layoutX="14.0" layoutY="72.0" text="Cantidad:" />
+            <Label layoutX="241.0" layoutY="72.0" text="Precio:" />
+            <TextField fx:id="itemTextField" disable="true" layoutX="70.0" layoutY="39.0" prefWidth="374.0" />
+            <TextField fx:id="quantityTextField" disable="true" layoutX="70.0" layoutY="69.0" prefWidth="152.0" />
+            <TextField fx:id="priceTextField" disable="true" layoutX="292.0" layoutY="69.0" prefWidth="152.0" />
+            <RadioButton fx:id="activeRadio" disable="true" layoutX="463.0" layoutY="56.0" mnemonicParsing="false" selected="true" text="Activo">
+              <toggleGroup>
+                <ToggleGroup fx:id="radioGroup" />
+              </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="inactiveRadio" disable="true" layoutX="463.0" layoutY="80.0" mnemonicParsing="false" text="Inactivo" toggleGroup="$radioGroup" />
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+  </children>
+</AnchorPane>
