@@ -1,6 +1,6 @@
 # VentasDS3
 
-This is a project for my Software Development 3 course at Universidad de Sonora. It consists of an app for database management purposes using JavaFX.
+This is a project for my Desarrollo de Sistemas 3 course at Universidad de Sonora. It consists of an app for database management purposes using JavaFX.
 
 # What I learned
 
